@@ -15,6 +15,11 @@ fun main () {
     //A Book class with a constructor and default values.
 
     //An instance of the Book class using default values.
-    
+
     //An instance of the Book class using custom values.
+
+    // Accessing & change properties :
+
+    customBook.title = "Heyyo"
+    println(customBook.title) // output : Heyyo instead of DEF
 }
