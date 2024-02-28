@@ -1,6 +1,10 @@
 package com.example.kotlinbasics
 
+data class CoffeeDetails(val sugarCount: Int, val name: String, val size: String, val creamAmount : Int)
 fun main () {
+
+    var chrisCoffee = CoffeeDetails(1,"Chris", "Medium", 1)
+    makeCoffee(chrisCoffee)
 
     println("please enter value 1 : ")
     var num1Str = readln().toInt()
@@ -31,20 +35,20 @@ fun askCoffeeDetails () {
     val sugarCount = readln().toInt()
 
 
-    makeCoffee(sugarCount= sugarCount, name = name)
+    // makeCoffee(sugarCount= sugarCount, name = name)
 }
 
-fun makeCoffee(sugarCount : Int, name : String){
+fun makeCoffee(coffeeDetails : CoffeeDetails){
 
-    if (sugarCount == 1) {
-        println("Coffee with 1 spoon of sugar for $name")
+    if (coffeeDetails.sugarCount == 1) {
+        println("${coffeeDetails.size} size Coffee with 1 spoon of sugar & ${coffeeDetails.creamAmount} spoon of cream for ${coffeeDetails.name}")
     }
-    else if (sugarCount < 0) {
-        println("Please enter valid value for $name")
+    else if (coffeeDetails.sugarCount < 0) {
+        println("Please enter valid value for ${coffeeDetails.name}")
     }
-    else if (sugarCount == 0){
-        println("Coffee without sugar for $name")
+    else if (coffeeDetails.sugarCount == 0){
+        println("${coffeeDetails.size} size Coffee without sugar for ${coffeeDetails.name}")
     }
-    else println("Coffee with $sugarCount spoons of sugar for $name")
+    else println("${coffeeDetails.size} size Coffee with ${coffeeDetails.sugarCount} spoons of sugar for ${coffeeDetails.name}")
 
 }
