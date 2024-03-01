@@ -28,5 +28,5 @@ Create a Kotlin file named "VariableTypes.kt" to practice declaring and working 
 
 > *Hint: This step illustrates the mutability aspect of variables declared with `var`.*
 
-**Final Step:**
+**Final Step: **
 You have successfully practiced working with both immutable (`val`) and mutable (`var`) variables in Kotlin. Your final code should showcase the declaration of both `val` and `var`, along with print statements displaying their values before and after modification (for `var`).
