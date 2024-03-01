@@ -19,6 +19,6 @@ fun main () {
 
     }
     // Step 4: Print the Modified List
-    println(numbers)
+    println(numbers) // Output : 2, 4, 9, 16, 25
 
 }
