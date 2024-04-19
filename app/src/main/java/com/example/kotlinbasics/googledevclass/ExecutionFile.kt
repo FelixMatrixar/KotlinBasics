@@ -8,12 +8,41 @@ fun main() {
 
 
     var smartHome: SmartHome = SmartHome(smartDeviceTv, smartDeviceLight)
-    println(smartHome.deviceTurnOnCount)
-    smartHome.turnOnLight()
-    smartHome.turnOnTv()
-    println(smartHome.deviceTurnOnCount)
-    smartHome.turnOffTv()
-    println(smartHome.deviceTurnOnCount)
+
+
+    smartDeviceTv.turnOn()
+    smartDeviceTv.printDeviceInfo()
+    smartDeviceLight.turnOn()
+    smartDeviceLight.printDeviceInfo()
+
     smartHome.increaseTvVolume()
+    smartHome.changeTvChannelToNext()
+    smartHome.increaseLightBrightness()
+
+    smartHome.decreaseTvVolume()
+    smartHome.changeTvChannelToPrevious()
+    smartHome.decreaseLightBrightness()
+
+    smartHome.printSmartTVInfo()
+    smartHome.printSmartLightInfo()
+
+    smartHome.turnOffAllDevices()
+    smartHome.turnOffAllDevices()
+
+    smartHome.printSmartTVInfo()
+    smartHome.printSmartLightInfo()
+
+    smartHome.increaseTvVolume()
+    smartHome.changeTvChannelToNext()
+    smartHome.increaseLightBrightness()
+
+    smartHome.decreaseTvVolume()
+    smartHome.changeTvChannelToPrevious()
+    smartHome.decreaseLightBrightness()
+
+    smartHome.turnOnTv()
+    smartHome.turnOnTv()
+    smartHome.turnOnLight()
+    smartHome.turnOnLight()
 
 }

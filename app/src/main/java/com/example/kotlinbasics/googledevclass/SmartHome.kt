@@ -13,18 +13,30 @@ class SmartHome(
         }
 
     fun turnOnTv() {
-        deviceTurnOnCount++
-        smartTvDevice.turnOn()
+        if(smartTvDevice.deviceStatus == "off") {
+            deviceTurnOnCount++
+            smartTvDevice.turnOn()}
+        else {
+            println("The TV has already turned on")}
     }
 
     fun turnOffTv() {
-        deviceTurnOnCount--
-        smartTvDevice.turnOff()
+        if(smartTvDevice.deviceStatus == "on") {
+            deviceTurnOnCount--
+            smartTvDevice.turnOff()}
+        else {
+            println("The TV has already turned off")}
     }
 
     fun increaseTvVolume() {
         if (smartTvDevice.deviceStatus == "on") {
             smartTvDevice.increaseSpeakerVolume()}
+        else {
+            println("Device is turned off")}
+    }
+    fun decreaseTvVolume() {
+        if (smartTvDevice.deviceStatus == "on") {
+            smartTvDevice.decreaseSpeakerVolume()}
         else {
             println("Device is turned off")}
     }
@@ -36,18 +48,48 @@ class SmartHome(
             println("Device is turned off")}
     }
 
+    fun changeTvChannelToPrevious() {
+        if (smartTvDevice.deviceStatus == "on") {
+            smartTvDevice.previousChannel()}
+        else {
+            println("Device is turned off")}
+    }
     fun turnOnLight() {
-        deviceTurnOnCount++
-        smartLightDevice.turnOn()
+        if(smartLightDevice.deviceStatus == "off") {
+            deviceTurnOnCount++
+            smartLightDevice.turnOn()}
+        else {
+            println("The light has already turned on")}
     }
 
     fun turnOffLight() {
-        deviceTurnOnCount--
-        smartLightDevice.turnOff()
+        if(smartLightDevice.deviceStatus == "on") {
+            deviceTurnOnCount--
+            smartLightDevice.turnOff()}
+        else {
+            println("The light has already turned off")}
     }
 
     fun increaseLightBrightness() {
-        smartLightDevice.increaseBrightness()
+        if(smartLightDevice.deviceStatus == "on") {
+            smartLightDevice.increaseBrightness()}
+        else {
+            println("The light not turned on yet")}
+    }
+
+    fun decreaseLightBrightness() {
+        if(smartLightDevice.deviceStatus == "on") {
+            smartLightDevice.decreaseBrightness()}
+        else {
+            println("The light not turned on yet")}
+    }
+
+    fun printSmartTVInfo() {
+        smartTvDevice.printDeviceInfo()
+    }
+
+    fun printSmartLightInfo() {
+        smartLightDevice.printDeviceInfo()
     }
 
     fun turnOffAllDevices() {
